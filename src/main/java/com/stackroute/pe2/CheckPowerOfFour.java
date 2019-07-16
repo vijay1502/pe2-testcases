@@ -3,11 +3,11 @@ package com.stackroute.pe2;
 import java.util.Scanner;
 import java.lang.Math;
 public class CheckPowerOfFour {
-    public String checkPower(int n){
+    public String checkPower(int number){
         Scanner scanner=new Scanner(System.in);
-        n=scanner.nextInt();
-        double x=Math.log(n)/Math.log(4);
-        if(x%0.25==0)
+        number=scanner.nextInt();
+        double result=Math.log(number)/Math.log(4);
+        if(result%0.25==0)
             return ("Yes it is power of four");
         else
             return ("It is not power of four");
