@@ -5,6 +5,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class StringReverseAndPalindromeCheckTest {
     private StringReverseAndPalindromeCheck reverseAndPalindrome;
@@ -33,20 +34,39 @@ public class StringReverseAndPalindromeCheckTest {
         assertEquals("tekinA",actualResult);
 
     }
+    //This test checks for palindrome and returns related output
     @Test
     public void givenAStringShouldReturnPalindrome(){
-        //As we have already initialised the Object of class, let us call the methods
+
         String actualResult=this.reverseAndPalindrome.reverseMethod("oxo");
         assertEquals("Given String is a palindrome",actualResult);
 
     }
+    //this test case checks for anti-palindrome strings and related output will be rendered
     @Test
-    public void givenAStringShouldReturnErrorIfNotAPalindromeString(){
-        //As we have already initialised the Object of class, let us call the methods
+    public void givenAStringShouldReturnCounterPalindromeString(){
+
         String actualResult=this.reverseAndPalindrome.reverseMethod("Mishra");
         assertEquals("Given String is not a palindrome",actualResult);
 
     }
+    //If a given integer or string is a single value, it should return an error message
+    @Test
+    public void givenASingleIntegerShouldReturnError(){
+
+        String actualResult=this.reverseAndPalindrome.reverseMethod("4");
+        assertEquals("The given input does not have multiple inputs to check for palindrome",actualResult);
+    }
+
+    //If
+    @Test
+    public void givenANullStringShouldReturnError(){
+        String actualResult=this.reverseAndPalindrome.reverseMethod(null);
+        assertNotNull(actualResult);
+        assertEquals("null is not allowed",actualResult);
+    }
+
+
 
 
     }

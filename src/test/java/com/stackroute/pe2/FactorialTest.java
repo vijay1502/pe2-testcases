@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class FactorialTest {
 
-        private static Factorial factorial;
+        private Factorial factorial;
         @BeforeClass
         public static void setup() {
             // This methods runs, before running any one of the test case
@@ -24,13 +24,51 @@ public class FactorialTest {
             factorial = null;
 
         }
+        //Tests for factorial and gives the output array for inputted number
         @Test
-        public void givenAnIntegerInputShouldReturnStringOfSignedIntegerFactorial(){
+        public void givenAnIntegerInputShouldReturnFactorialInStringArray(){
        //act
-
+        //input parameter should be an integer inside factoriaLFunction
         String[] actualResult=factorial.factorialFunction(2);
-        String[] arr= {"factorial of 1 is 1","factorial of 2 is 2"};
+        String[] array= {"factorial of 1 is 1","factorial of 2 is 2"};
         //assert
-        assertArrayEquals(arr,actualResult);
+        assertArrayEquals(array,actualResult);
     }
+    //AS the given method is to be written for 32-bit integer, the method should fail if it exceeds 21 digits
+    @Test
+    public void givenAnIntegerInputShouldReturnErrorMessage(){
+        //act
+
+        String[] actualResult=factorial.factorialFunction(21);
+        String[] array= {"Array Limit out of bounds,as it exceeded 32 bit integer"};
+        //assert
+        assertArrayEquals(array,actualResult);
+    }
+    //Factorial does not allow negative integers, so an errorshould be displayed
+    @Test
+    public void givenANegativeIntegerInputShouldReturnErrorMessage(){
+        //act
+
+        String[] actualResult=factorial.factorialFunction(-2);
+        String[] array= {"Array doesnot have negative values"};
+        //assert
+        assertArrayEquals(array,actualResult);
+    }
+
+    // The below functions are written for 64-bit integer outputs.
+    // *****************************************************
+
+    @Test
+    public void givenAnIntegerInputShouldReturnStringArrayOfFactorialValues(){
+        //act
+
+        String[] actualResult=factorial.factorialSecondFunction(2);
+        String[] array= {"factorial of 1 is 1","factorial of 2 is 2"};
+        //assert
+        assertArrayEquals(array,actualResult);
+    }
+
+
+
+
 }
