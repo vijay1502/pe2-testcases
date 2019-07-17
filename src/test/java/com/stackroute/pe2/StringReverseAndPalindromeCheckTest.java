@@ -30,7 +30,7 @@ public class StringReverseAndPalindromeCheckTest {
     @Test
     public void givenAStringShouldReturnPalindrome(){
 
-        String actualResult=this.reverseAndPalindrome.palindromeMethod("oxo");
+        String actualResult=this.reverseAndPalindrome.reverseAndPalindromeMethod("oxo");
         assertEquals("Given String is a palindrome",actualResult);
 
     }
@@ -38,7 +38,7 @@ public class StringReverseAndPalindromeCheckTest {
     @Test
     public void givenAStringShouldReturnCounterPalindromeString(){
 
-        String actualResult=this.reverseAndPalindrome.palindromeMethod("Mishra");
+        String actualResult=this.reverseAndPalindrome.reverseAndPalindromeMethod("Mishra");
         assertEquals("Given String is not a palindrome",actualResult);
 
     }
@@ -46,14 +46,14 @@ public class StringReverseAndPalindromeCheckTest {
     @Test
     public void givenASingleIntegerShouldReturnError(){
 
-        String actualResult=this.reverseAndPalindrome.palindromeMethod("4");
+        String actualResult=this.reverseAndPalindrome.reverseAndPalindromeMethod("4");
         assertEquals("The given input does not have multiple inputs to check for palindrome",actualResult);
     }
 
     //If
     @Test
     public void givenANullStringShouldReturnError(){
-        String actualResult=this.reverseAndPalindrome.palindromeMethod(null);
+        String actualResult=this.reverseAndPalindrome.reverseAndPalindromeMethod(null);
         assertNotNull(actualResult);
         assertEquals("null is not allowed",actualResult);
     }

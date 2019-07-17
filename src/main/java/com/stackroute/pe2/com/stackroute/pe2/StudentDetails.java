@@ -7,7 +7,7 @@ public class StudentDetails {
     int numberofElements=scanner.nextInt();
 
 
-    public int studentCheckDetail(int[] number){
+    public int checkStudentDetail(int[] number){
         int average=0;
 
     for(int i=0;i<numberofElements;i++){
@@ -17,7 +17,7 @@ public class StudentDetails {
 
     return average;}
 
-    public int studentCheckDetailMax(int[] number){
+    public int checkStudentDetailMax(int[] number){
 
 
         for(int i=0;i<numberofElements;i++){
@@ -32,7 +32,7 @@ public class StudentDetails {
 
         return max;}
 
-    public int studentCheckDetailMin(int[] number){
+    public int checkStudentDetailMin(int[] number){
 
 
         for(int i=0;i<numberofElements;i++){
