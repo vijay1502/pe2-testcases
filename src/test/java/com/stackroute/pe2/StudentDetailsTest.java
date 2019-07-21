@@ -23,18 +23,18 @@ public class StudentDetailsTest {
 
         //act
         int[] marks= {10,20,30};
-        int actualresult =  this.stdntdtl.checkStudentDetail(marks);
+        int actualresult =  this.stdntdtl.checkStudentDetailAvg(marks);
 
         //assert
 
-        assertEquals("20", actualresult);
+        assertEquals(20, actualresult);
     }
     @Test
     public void givenInvalidStudentDetailShouldReturnMinimumMarks(){
 
         //act
         int[] marks= {10,20,30};
-        int actualresult =  this.stdntdtl.checkStudentDetail(marks);
+        int actualresult =  this.stdntdtl.checkStudentDetailMin(marks);
 
         //assert
 
@@ -45,7 +45,7 @@ public class StudentDetailsTest {
 
         //act
         int[] marks= {10,20,30};
-        int actualresult =  this.stdntdtl.checkStudentDetail(marks);
+        int actualresult =  this.stdntdtl.checkStudentDetailMax(marks);
 
         //assert
 

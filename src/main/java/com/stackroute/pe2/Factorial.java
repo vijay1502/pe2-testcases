@@ -1,2 +1,10 @@
 package com.stackroute.pe2;
-//This code is intended to find the factorial of the given numbers.
+
+public class Factorial {
+    public String[] factorialFunction(int inputInteger){
+        return null;
+    }
+    public String[] factorial64Bit(int input){
+        return null;
+    }
+}

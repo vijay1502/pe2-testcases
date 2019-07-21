@@ -1,24 +1,24 @@
 package com.stackroute.pe2;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class StringReverseAndPalindromeCheckTest {
-    private StringReverseAndPalindromeCheck reverseAndPalindrome;
-    @BeforeClass
-    public static void setup() {
+    StringReverseAndPalindromeCheck reverseAndPalindrome;
+    @Before
+    public void setup() {
         // This methods runs, before running any one of the test case
         // This method is used to initialize the required variables
         reverseAndPalindrome = new StringReverseAndPalindromeCheck();
 
     }
 
-    @AfterClass
-    public static void teardown() {
+    @After
+    public void teardown() {
         // This method runs, after running all the test cases
         // This method is used to clear the initialized variables
         reverseAndPalindrome = null;
@@ -46,7 +46,7 @@ public class StringReverseAndPalindromeCheckTest {
     @Test
     public void givenASingleIntegerShouldReturnError(){
 
-        String actualResult=this.reverseAndPalindrome.reverseAndPalindromeMethod("4");
+        String actualResult=this.reverseAndPalindrome.reverseAndPalindromeMethod("a");
         assertEquals("The given input does not have multiple inputs to check for palindrome",actualResult);
     }
 

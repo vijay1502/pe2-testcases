@@ -24,12 +24,6 @@ public class WordFrequencyTest {
 
     }
 
-    @Test
-    public void givenAStringShouldReturnFrequencyCountOfTheString(){
-        //act
-        String[] arr={"i->3 times","am-1","like -1","have -1","a-2"};
-        String[] actualResult=wordFrequency.wordRepeatitionMethod("i am a man, i like to sleep ,i have a home");
-        assertArrayEquals(arr,actualResult);
-    }
+
 
 }

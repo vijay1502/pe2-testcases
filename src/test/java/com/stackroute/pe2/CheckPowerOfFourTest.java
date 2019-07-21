@@ -8,10 +8,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CheckPowerOfFourTest {
-    CheckPowerOfFour chekpowr;
+    CheckPowerOfFour checkPower;
     @Before
     public void setUp() throws Exception {
-        this.chekpowr = new CheckPowerOfFour();
+        this.checkPower = new CheckPowerOfFour();
     }
 
     @After
@@ -24,7 +24,7 @@ public class CheckPowerOfFourTest {
 
         //act
 
-        String actualresult =  this.chekpowr.checkPower(16);
+        String actualresult =  this.checkPower.checkPower(16);
 
         //assert
 
@@ -35,7 +35,7 @@ public class CheckPowerOfFourTest {
 
         //act
 
-        String actualresult =  this.chekpowr.checkPower(15);
+        String actualresult =  this.checkPower.checkPower(15);
 
         //assert
 

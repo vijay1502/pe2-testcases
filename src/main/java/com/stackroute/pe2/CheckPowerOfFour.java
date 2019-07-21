@@ -1,6 +1,5 @@
 package com.stackroute.pe2;
-
-import java.util.Scanner;
+import java.util.*;
 import java.lang.Math;
 public class CheckPowerOfFour {
     public String checkPower(int number){
