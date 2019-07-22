@@ -16,7 +16,7 @@ public class CheckPowerOfFourTest {
 
     @After
     public void tearDown() throws Exception {
-
+        checkPower=null;
     }
 
     @Test

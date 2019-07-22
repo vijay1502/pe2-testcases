@@ -1,10 +1,8 @@
 package com.stackroute.pe2;
-import java.util.*;
-import java.lang.Math;
 public class CheckPowerOfFour {
     public String checkPower(int number){
-        Scanner scanner=new Scanner(System.in);
-        number=scanner.nextInt();
+       /* Scanner scanner=new Scanner(System.in);
+        number=scanner.nextInt();*/
         double result=Math.log(number)/Math.log(4);
         if(result%0.25==0)
             return ("Yes it is power of four");
