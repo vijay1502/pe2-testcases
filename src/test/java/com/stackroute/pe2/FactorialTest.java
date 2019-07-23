@@ -29,8 +29,8 @@ public class FactorialTest {
         public void givenAnIntegerInputShouldReturnFactorialInStringArray(){
        //act
         //input parameter should be an integer inside factoriaLFunction
-        String actualResult=factorial.factorialMethod(2);
-        String expectedResult= "[factorial of 1 is 1,factorial of 2 is 2]";
+        String actualResult=factorial.factorialMethod(5);
+        String expectedResult= "factorial of 5 is 120";
         //assert
         assertEquals(expectedResult,actualResult);
     }
@@ -39,19 +39,11 @@ public class FactorialTest {
     public void givenAnIntegerInputShouldReturnErrorMessage(){
         //act
 
-        String actualResult=factorial.factorialMethod(21);
-        String expectedResult= "Factorial of 13 is out 0f range";
+        String actualResult=factorial.factorialMethod(13);
+        String expectedResult= "The output range is greater than 32 bit";
         //assert
         assertEquals(expectedResult,actualResult);
     }
     //Factorial does not allow negative integers, so an errorshould be displayed
-    @Test
-    public void givenANegativeIntegerInputShouldReturnErrorMessage(){
-        //act
 
-        String actualResult=factorial.factorialMethod(-2);
-        String expectedResult= "factorial cannot have negative values";
-        //assert
-        assertEquals(expectedResult,actualResult);
-    }
 }
